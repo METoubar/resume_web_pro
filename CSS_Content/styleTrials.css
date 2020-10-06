@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+
+/* div {
+  margin: 20px;
+} */
+.top-container {
+  /* margin: 0; */
+  /* width: 200px;
+  height: 200px; */
+  /* border: 10px solid; */
+  /* padding: 20px; */
+  /* background-color: #dd7631; */
+  background-color: #27496d;
+  position: relative;
+  padding-top: 100px;
+  line-height: 2;
+}
+
+/* .mid-container {
+  width: 200px;
+  height: 200px;
+  /* border: 20px solid;
+  margin-left: 260px; */
+  background-color: #f6d743;
+  display: inline-block;
+  /* position: relative;
+  left: 400px; */
+}
+
+.bot-container {
+  width: 600px;
+  height: 200px;
+  /* background: linear-gradient(to right, red, green, blue, yellow); */
+  background: radial-gradient(red, orange, yellow, green, blue, indigo, violet, rgb(30, 144, 255));
+  position: sticky;
+  /* border: 10px solid;
+  margin-left: 500px; */
+  /* background-color: #649d66; */
+  display: inline-block;
+}
+
+.extra-container {
+  width: 200px;
+  height: 200px;
+  background-color: #d32626;
+  display: inline-block;
+  /* position: relative;
+  right: 400px; */
+  background: repeating-linear-gradient(to top left, lightpink, lightpink 5px, white 5px, white 10px);
+  /* background: repeating-radial-gradient(powderblue, powderblue 16px, white 16px, white 32px); */
+}
+
+.size-tester {
+  border: solid thick yellow;
+  border-radius: 15px 40px 15px / 70% 90px;
+  padding: 10px;
+  margin: 30px;
+  /* background: url("../images/sherlok.jpg"); */
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  background-color: #def4f0;
+  /* height: 250px;
+  width: 400px; */
+  /* height: 30%;
+  width: 70%; */
+  /* box-sizing: border-box; */
+  /* box-sizing: content-box; */
+  height: max-content;
+  /* height: auto; */
+  /* width: max-content; */
+  width: auto;
+}
+
+.border-images {
+  width: 600px;
+  height: 300px;
+  background: #888888;
+  border: 20px solid;
+  border-image: url(../images/quads_frame.png) 20 20 / 30px 30px / 40px round;
+  /* border-image-slice: 10% 5%;
+  border-image-outset: 30px; */
+  /* margin: 50px; */
+  /* padding: 40px; */
+  position: relative;
+  margin: 60px auto;
+}
+
+.personal-description {
+  text-transform: capitalize;
+  font-weight: normal;
+}
+
+#top-cloud {
+  position: absolute;
+  right: 300px;
+  top: 50px;
+}
+
+#bot-cloud {
+  position: absolute;
+  bottom: : 300px;
+  left: 300px;
+}
+
+#mountain {
+  position: relative;
+  margin: auto;
+}
+
+h1, h2 {
+  color: #66BFBF;
+}
+
+h1 {
+  margin: 50px auto 0;
+  padding: 10px;
+  /* font-family: 'Kaushan Script', cursive; */
+  font-family: 'Dancing Script', cursive;
+  font-size: 80px;
+}
+
+h2 {
+  margin: 0;
+  padding: 15px;
+  font-family: "Hoefler Text", "Baskerville Old Face", Garamond, "Times New Roman", serif;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+h3, a {
+  color: #11999E;
+  text-transform: capitalize;
+}
+
+p {
+  margin: 0;
+  padding: 15px;
+  font-family: Papyrus,fantasy;
+  font-size: 30px;
+}

@@ -1,0 +1,339 @@
+
+So our web site is still looking a little bit sparse and in fact it's looking nothing like this, is it?
+
+But we're going to change up very very quickly.
+
+Let's go ahead and add the rest of the content in order to have all the images that we need for our
+
+top section.
+
+Now in this lesson if you look at the resources you'll find a zip file that you can download and once
+
+you extract that zip file you should now have a folder called CSS - My Site Images.
+
+Now if you double click on this folder, you'll see two images.
+
+One is a cloud.
+
+Another is a mountain.
+
+And we're going to try and recreate the scene that they've got over here.
+
+So let's go ahead and add those images to our project folder.
+
+So if you pull up Atom and find your project folder' then we're going to go and create a new folder in
+
+here called images, and inside this images folder is where we're going to drag and drop those two pngs,
+
+the cloud and the mountain.
+
+So we're going to put it inside here so that we can use it inside our web site.
+
+So now we're going to go ahead and look at our images so that we have a image of a cloud at the top
+
+of our top container.
+
+So the source will be images/cloud.png, and the alt text will just be "cloud-img", and we're
+
+going to have another cloud below this paragraph tag.
+
+And finally we're going to have an image of our mountain right at the bottom.
+
+So that will be images/mountain.png, and the alt text will just be "mountain-img".
+
+All right.
+
+Let's hit save and let's refresh to see what our page looks like right now.
+
+Now it looks a little bit weird, right?
+
+Why is it that this cloud is taking up its own line and it's not next to either this heading or this
+
+paragraph tag,
+
+but this cloud is on the same line and next to this mountain image? What is going on here?
+
+Well, to understand this we have to look at the CSS display property.
+
+Now the display property has four different values and we're going to look at them in turn and see what
+
+each one of these does.
+
+Now if we switch on Pesticide again, you can see that the box around the cloud is only as large as the
+
+image, as is the box around the mountain
+
+and this cloud.
+
+But the box around the h1, and also the paragraph element, they're as long as the width of the page.
+
+So what's going on here?
+
+Well by default some elements are what's called block display,
+
+for example this h1 and this paragraph tag. And block elements are those that take up essentially the
+
+whole width of the screen on a web page,
+
+so effectively blocking out any other elements from sitting next to it on the left or on the right.
+
+Now the most common block elements that we would have seen already are our paragraphs, our headers, so
+
+h1 through to h6, our divs, our lists and list items, as well as forms.
+
+And if we head over to Code Pen, and I'm just going to create a new anonymous pen. Let me just get rid of the
+
+JS editor, and I'm going to have my view with my editors on the right.
+
+So now I'm going to go ahead and create two block elements. So we know that paragraphs are block elements.
+
+So let's create a paragraph called Hello.
+
+Another one called World.
+
+Now if I select the paragraph tag in my CSS and I give them both a background color of, say, red, then
+
+you can see that the entire paragraph takes up the whole width of the web page.
+
+So it's blocking any other element from being on the same line next to it, on the right on the left.
+
+Now here's a related problem.
+
+Say if I wanted to look at this paragraph tag, which we now know to be a block element.
+
+What if I wanted to style the pro part of it differently from the rest of the words in this paragraph
+
+tag?
+
+How can I only target one part of this paragraph tag?
+
+How can I, say for example, underline the word pro so that it says 'a programmer', but style these three characters
+
+differently?
+
+Well some of you might think that I could just split up this sentence into three paragraph tags.
+
+So what if it was 'a' plus a space, then it was 'pro' and then it was 'grammer', 'a programmer'.
+
+So now I've got this separate paragraph tag for the word pro and I can give it a class of say just the
+
+word pro and I can go into styles and style it differently from the others, so I can say .pro, and
+
+this one, if you do a little bit of research on Google, you'll find that in order to make it underlined
+
+you just have to change the text decoration to underline. Now what happens in this case? Let's check it
+
+out.
+
+You can see that because the paragraph element are blocking elements,
+
+they take up the entire width, and they block everything else from being on the same line as themselves.
+
+This doesn't actually work even though we've been able to target just one part of that line.
+
+We can't have it looking like this.
+
+So let me show you the solution. Instead of having three paragraph tags,
+
+so let's just undo this to where we were before, and we've got a single paragraph element,
+
+what we can do is, we can use another HTML element called a span, and inside the span we can add that
+
+word 'pro', and we can give that span a class of pro.
+
+And because we've already selected that class in CSS, and we're making that part underlined, then that
+
+is going to be applied to the word in this span.
+
+Now if we hit save and we refresh you can see that we've achieved what we set out to do.
+
+And this sentence is still on the same line.
+
+Now why is that? If we switch on Pesticide once more,
+
+and I hold down the control key,
+
+you can see that over here
+
+I'm hovering over the entire paragraph element, but one part of it has a span, and this allows us to select,
+
+almost like as if you would highlight a section of your text, just select one part of the text in order
+
+to format it or style it differently.
+
+Now the reason why I'm showing you this here, instead of inside the HTML module, is because spans, like
+
+divs, don't do very much unless they're used in conjunction with CSS.
+
+But another reason why I'm showing it to you now is because the span element is what's known as an
+
+inline display element.
+
+So unlike block display elements, for example the heading and also the paragraph element, an inline display
+
+element only takes up as much space as it needs to in the height and in its width so you can see that
+
+the box around the span is only as large as it needs to be as is the box around our cloud and also our
+
+mountain.
+
+So some of the common inline elements that you're going to come across are things like span, image
+
+elements and also your anchor tags.
+
+If you think back to our CV web site that we created in our HTML module, the links for our Hobbies web
+
+site and our Contact Me web site, they show up next to each other.
+
+And this is because they are inline elements and they do not block other elements from occurring on
+
+the same line,
+
+in fact they encourage them to.
+
+And so this is why they called inline elements.
+
+Now if we head back into our code pen and we create another span.
+
+Now while you can have spans that are nested inside paragraph tags or h1s or whatever else it may be,
+
+you can also have them as standalones. But you can see here, if we select our span element and we also give
+
+it a background color,
+
+then you can see that these elements are inline.
+
+And even if we had a whole bunch more of these spans they would continue to be stacked onto the same
+
+line until we run out of space horizontally.
+
+Now you might wonder why would we ever use block elements if we can simply use inline elements.
+
+Surely it seems far more flexible.
+
+Well there's just one problem with inline elements.
+
+You can't actually change the width.
+
+So if I said the width of all the spans should be 100 pixels you can see that absolutely nothing happens.
+
+But if I specify a width, the same width, to our block elements, then you can see that it complies very eagerly
+
+but it still doesn't let any other element sit on the same line.
+
+So what can you do?
+
+Well, you can actually change the display property of any given element. So I can make a paragraph element,
+
+which we know is by default a block element,
+
+I can change its display value to be inline, and that makes all of our paragraphs inline elements and
+
+allows everything to sit next to each other on the same line.
+
+But you can see we've just lost the ability to change its width. Now
+
+similarly I can change the display property of our inline elements to block elements, and this allows
+
+me to change its width but it doesn't let them sit on the same line.
+
+So what should I do if I wanted elements that can occupy the same line but at the same time I can set
+
+their widths?
+
+Which one should I choose then?
+
+Well, you don't actually have to choose because there is another type of display which is called the
+
+inline block, and this kind of gives you the best of both worlds.
+
+So if instead of changing the paragraph element to inline I'm going to change it to inline-block,
+
+then you'll see that not only am I allowed to change its width, you can see that it's now 100 pixels
+
+wide, but I'm also able to make them go onto the same line,
+
+so act almost like inline elements.
+
+And this is kind of what image elements are like
+
+by default.
+
+Now I say kind of because, as always, reality is much more complex than that.
+
+But if you're interested I'll provide a link to more discussion around this.
+
+But for our purposes we're just going to treat images as if they are inline block elements because
+
+we're able to change its width and height to whatever it is that we desire
+
+and they also get displayed as if they're inline elements next to each other.
+
+So we've now covered three out of the four display values that we have access to.
+
+The last one is simply display none.
+
+And that just gets rid of our element.
+
+So let's head back into our code pen and I'm going to give our second paragraph element a separate class.
+
+I'm going to call this second-p and I'm going to target it down
+
+here,
+
+.second-p.
+
+And I'm going to set its display value to none, and you can see what that does is that it simply removes
+
+that element from the website as if it didn't exist.
+
+So if I get rid of this display block and allow our spans to continue being inline elements you can
+
+see that there's no gap between the first Hello and the second Hello. That World paragraph has now completely
+
+disappeared out of the flow of the document as if it never was written inside the code.
+
+It's almost like I've just gone ahead and deleted it from the HTML.
+
+But of course I haven't, and all that I've done is just set its display value to none.
+
+Now when you try to figure out how to hide things on your web page, for example if you had a quiz, then
+
+you might want to hide and show the answer,
+
+there's two ways that you can do this.
+
+One is display none as you've seen here,
+
+which takes that element out of the flow and it's as if it never existed.
+
+The other one is a property called visibility.
+
+And this you can set to hidden, and what this does is that it makes that element disappear but it keeps
+
+its original position, and all the other elements still flow around it as if it's still there.
+
+It just can't be seen anymore.
+
+So whenever you're trying to make things disappear or reappear,
+
+think about what effect you want to have, and choose between these two properties.
+
+So as we've seen in this lesson the position of elements on screen are determined by many things:
+
+the box model, the margins, the size of the border, the size of the width and the height of the actual
+
+element,
+
+whether its display block or whether it's display inline, whether we're allowed to set its width or
+
+if we're not.
+
+But even before CSS comes into play, you have to remember that there's already rules that govern how
+
+your HTML elements should be displayed on screen.
+
+So to learn about that and to learn more about CSS positioning, I'll see you on the next lesson.
+
+
+Video course
